@@ -16,35 +16,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 * {
@@ -85,9 +85,34 @@ p {
     padding-bottom: 20px;  
 }
 
+.about-page .top-content .text-container{
+    width:100%;
+    padding-left:2%;
+    padding-right:2%;
+}
+
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
+}
+
+.about-page .middle-content{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 1%;
+    border-bottom:0;
+    margin-bottom: 0;
+}
+
+.about-page .middle-content > div{
+    width: 46%;
+    margin: 0 2%;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+.img-text-btn-box{
+
 }
 
 .middle-content h2 {
@@ -143,4 +168,59 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    flex-wrap: nowrap;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.flex-container{
+    display:flex;
+}
+
+.links-list.flex-container {
+    justify-content: space-around;
+    width: calc(100% - 157px);
+}
+
+nav .links-list a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+img.hero-img {
+    margin-bottom: 20px;
+}
+
+.img-text-btn-box h2 {
+    padding: 15px 0 20px;
+}
+
+a.btn {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    display: inline-block;
+}
+
+.img-text-btn-box > p {
+    margin-bottom: 20px;
+}
+
+.img-text-btn-box {
+    border-bottom: 1px dashed black;
+}
+
+.img-text-btn-box img {
+    width: 100%;
+}
+
+.about-page .bottom-content {
+    margin-bottom: 40px;
 }
