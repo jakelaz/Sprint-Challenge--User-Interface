@@ -16,35 +16,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 * {
@@ -85,9 +85,34 @@ p {
     padding-bottom: 20px;  
 }
 
+.about-page .top-content .text-container{
+    width:100%;
+    padding-left:2%;
+    padding-right:2%;
+}
+
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
+}
+
+.about-page .middle-content{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 1%;
+    border-bottom:0;
+    margin-bottom: 0;
+}
+
+.about-page .middle-content > div{
+    width: 46%;
+    margin: 0 2%;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+.img-text-btn-box{
+
 }
 
 .middle-content h2 {
@@ -143,4 +168,101 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    flex-wrap: nowrap;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.flex-container{
+    display:flex;
+}
+
+.nav-links.flex-container {
+    justify-content: space-around;
+    width: calc(100% - 157px);
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.nav-links a.current-page{
+    color:#999;
+    pointer-events: none;
+}
+
+img.hero-img {
+    margin-bottom: 20px;
+    max-width:100vw;
+}
+
+.img-text-btn-box h2 {
+    padding: 15px 0 20px;
+}
+
+a.btn {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    display: inline-block;
+    cursor:pointer;
+}
+
+a.btn:hover{
+    background: #000;
+    color:#FFF;
+}
+
+.img-text-btn-box > p {
+    margin-bottom: 20px;
+}
+
+.img-text-btn-box {
+    border-bottom: 1px dashed black;
+}
+
+.img-text-btn-box img {
+    width: 100%;
+}
+
+.about-page .bottom-content {
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 880px) {
+    nav.topnav {
+        position: fixed;
+        top:0;
+        left: 0;
+        right: 0;
+        background: #F1F1F1;
+        padding: 10px 30px;
+    }
+    body > div.container{
+        padding-top:100px;
+    }
+}
+
+@keyframes btn-move {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+nav .nav-links a:hover, a.btn:hover{
+    animation: btn-move 1s ease-in-out infinite;
 }
